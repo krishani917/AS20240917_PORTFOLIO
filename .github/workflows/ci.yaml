@@ -1,32 +1,26 @@
-name: CI Pipeline
+name: Continuous Integration
 
 on:
   push:
     branches:
-      - master
-  pull_request:
-    branches:
-      - master
+      - main
 
 jobs:
-  build:
-
+  test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Set up Java
-        uses: actions/setup-java@v4
-        with:
-          java-version: '17'
-          distribution: 'temurin'
+      - name: Verify HTML File Exists
+        run: test -f index.html
 
-      - name: Build Project
-        run: |
-          echo "Building project..."
-          mvn clean test
+      - name: Verify CSS File Exists
+        run: test -f style.css
 
-      - name: Success Message
-        run: echo "CI Pipeline completed successfully!"
+      - name: Verify JavaScript File Exists
+        run: test -f script.js
+
+      - name: CI Successful
+        run: echo "Website Passed Validation"
