@@ -40,3 +40,26 @@ document.querySelectorAll('.nav-links a').forEach(link => {
         navLinks.classList.remove('open');
     });
 });
+
+// =====================================================
+// 3. ACTIVE NAV LINK ON SCROLL
+// =====================================================
+const sections = document.querySelectorAll('section');
+const navAnchors = document.querySelectorAll('.nav-links a:not(.theme-toggle)');
+
+window.addEventListener('scroll', () => {
+    let current = 'home';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        if (window.scrollY >= sectionTop) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    navAnchors.forEach(anchor => {
+        anchor.classList.remove('active');
+        if (anchor.getAttribute('href') === `#${current}`) {
+            anchor.classList.add('active');
+        }
+    });
+});
