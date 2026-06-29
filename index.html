@@ -373,6 +373,120 @@
             </div>
         </div>
     </section>
+     <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Krishani Randika. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ===== SCROLL TOP ===== -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- ===== CV MODAL ===== -->
+    <div class="cv-modal-overlay" id="cvModalOverlay">
+        <div class="cv-modal">
+            <button class="cv-modal-close" id="cvModalClose" aria-label="Close CV">&times;</button>
+            <div class="cv-header">
+                <div class="cv-avatar">
+                    <img src="4.jpeg" alt="Krishani Randika" />
+                </div>
+                <div class="cv-name-title">
+                    <h2>Krishani Randika</h2>
+                    <p class="cv-subhead">Undergraduate Student &bull; Aspiring Software Developer</p>
+                </div>
+            </div>
+            <hr />
+
+            <div class="cv-section">
+                <h3><i class="fas fa-user" style="color:var(--accent);margin-right:0.5rem;"></i> Profile</h3>
+                <p>
+                    Dedicated second-year undergraduate at the University of Sri Jayewardenepura
+                    with a strong passion for software development. Eager to apply technical skills
+                    in real-world projects and contribute to innovative solutions.
+                </p>
+            </div>
+
+            <div class="cv-section">
+                <h3><i class="fas fa-graduation-cap" style="color:var(--accent);margin-right:0.5rem;"></i> Education</h3>
+                <ul>
+                    <li><strong>University of Sri Jayewardenepura</strong> — B.Sc. (Second Year) &nbsp; <span style="color:var(--accent);">2024–Present</span></li>
+                    <li><strong>University of Ruhuna</strong> — Advanced Certificate in English &nbsp; <span style="color:var(--accent);">2023–2024</span></li>
+                    <li><strong>Sujatha Balika Vidyalaya</strong> — GCE A/L (Mathematics &amp; Science) &nbsp; <span style="color:var(--accent);">2014–2022</span></li>
+                </ul>
+            </div>
+
+            <div class="cv-section">
+                <h3><i class="fas fa-code" style="color:var(--accent);margin-right:0.5rem;"></i> Skills</h3>
+                <ul>
+                    <li><strong>Languages:</strong> Python, Java, JavaScript, HTML, CSS</li>
+                    <li><strong>Frameworks:</strong> React, Node.js (basic)</li>
+                    <li><strong>Tools:</strong> Git, GitHub, MySQL, VS Code</li>
+                    <li><strong>Soft Skills:</strong> Problem solving, teamwork, communication</li>
+                </ul>
+            </div>
+
+            <div class="cv-section">
+                <h3><i class="fas fa-project-diagram" style="color:var(--accent);margin-right:0.5rem;"></i> Projects</h3>
+                <ul>
+                    <li><strong>Portfolio Website</strong> — HTML, CSS, JS (Year 2)</li>
+                    <li><strong>Logistic Management System</strong> — Java + MySQL (Year 1)</li>
+                    <li><strong>Sales Management System</strong> — Java OOP + MySQL (Year 1)</li>
+                    <li><strong>Cake Website</strong> — React + Node.js + MongoDB (Year 2)</li>
+                    <li><strong>Pizzarella</strong> — React + Node.js + PostgreSQL (Year 2)</li>
+                    <li><strong>Pet Care</strong> — React + Node.js + MongoDB (Year 2)</li>
+                </ul>
+            </div>
+
+            <div class="cv-section">
+                <h3><i class="fas fa-address-card" style="color:var(--accent);margin-right:0.5rem;"></i> Contact</h3>
+                <p>
+                    <i class="fas fa-envelope" style="color:var(--accent);width:20px;"></i> krishanirandika614@gmail.com &nbsp;|&nbsp;
+                    <i class="fas fa-phone" style="color:var(--accent);width:20px;"></i> +94 785295109 &nbsp;|&nbsp;
+                    <i class="fas fa-map-marker-alt" style="color:var(--accent);width:20px;"></i> Colombo, Sri Lanka
+                </p>
+            </div>
+
+            <hr />
+            <div class="cv-actions">
+                <button class="btn btn-primary" id="downloadCvBtn">
+                    <i class="fas fa-download"></i> Download CV (PDF)
+                </button>
+                <button class="btn btn-outline" id="cvModalCloseBtn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== PROJECT DETAIL MODAL ===== -->
+    <div class="project-modal-overlay" id="projectModalOverlay">
+        <div class="project-modal">
+            <button class="project-modal-close" id="projectModalClose" aria-label="Close project details">&times;</button>
+            <h2 id="projectModalTitle">Project Title</h2>
+            <span class="modal-year" id="projectModalYear">Year</span>
+            <hr />
+            <div class="modal-section">
+                <h4><i class="fas fa-info-circle" style="color:var(--accent);margin-right:0.4rem;"></i> Description</h4>
+                <p id="projectModalDesc">Project description goes here.</p>
+            </div>
+            <div class="modal-section">
+                <h4><i class="fas fa-code" style="color:var(--accent);margin-right:0.4rem;"></i> Technologies</h4>
+                <div class="modal-tech" id="projectModalTech"></div>
+            </div>
+            <div class="modal-section">
+                <h4><i class="fas fa-list-check" style="color:var(--accent);margin-right:0.4rem;"></i> Key Features</h4>
+                <ul id="projectModalFeatures"></ul>
+            </div>
+            <hr />
+            <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:0.5rem;">
+                <button class="btn btn-outline" id="projectModalCloseBtn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
 
 </body>
 </html>
